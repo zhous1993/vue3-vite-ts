@@ -1,0 +1,46 @@
+$content-width: 1152px;
+
+// flex布局
+$flex-jc:(
+    start: flex-start,
+    center: center,
+    between: space-between,
+    arround: space-arround,
+        end: flex-end
+);
+$flex-al:(
+    start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch,
+);
+
+// 字体大小
+$fs-base: 14px;
+$fs-size: (
+    sm: -2,
+    md: 2,
+    lg: 6
+);
+
+// padding margin
+$spacing-type:(
+    p: padding,
+    m: margin
+);
+$spacing-dir:(
+    t: top,
+    b: bottom,
+    l: left,
+    r: right
+);
+
+$spacing-base-size: 16px;
+$spacing-size:(
+    0: 0,
+    1: 0.25,
+    2: 0.5,
+    3: 1,
+    4: 1.5,
+    5: 3,
+)

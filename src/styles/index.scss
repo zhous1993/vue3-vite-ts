@@ -1,0 +1,8 @@
+@import "./normalize.scss";
+@import "element";
+@import "util";
+@import "vue-transition";
+html,body{
+  padding: 0;
+  margin: 0;
+}

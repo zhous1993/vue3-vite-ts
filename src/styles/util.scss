@@ -1,0 +1,76 @@
+@import "variables";
+.d-flex{
+    display: flex;
+}
+.d-flex-column{
+  display: flex;
+  flex-direction: column;
+}
+.d-flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-1{
+    flex: 1;
+}
+
+//.jc-center
+@each $key, $value in $flex-jc {
+    .jc-#{$key}{
+        justify-content: $value;
+    }
+}
+
+//.al-center
+@each $key, $value in $flex-al {
+    .al-#{$key}{
+        align-items: $value;
+    }
+}
+
+// .fs-sm
+@each $key,$value in $fs-size {
+    .fs-#{$key}{
+        font-size: $fs-base+$value;
+    }
+}
+
+@each $typekey, $type in $spacing-type {
+    //.m-1
+    @each $sizekey, $size in $spacing-size {
+      .#{$typekey}-#{$sizekey} {
+        #{$type}: $size * $spacing-base-size;
+      }
+    }
+  
+    //.mx-1
+    @each $sizekey, $size in $spacing-size {
+      .#{$typekey}x-#{$sizekey} {
+        #{$type}-left: $size * $spacing-base-size;
+        #{$type}-right: $size * $spacing-base-size;
+      }
+  
+      .#{$typekey}y-#{$sizekey} {
+        #{$type}-top: $size * $spacing-base-size;
+        #{$type}-bottom: $size * $spacing-base-size;
+      }
+    }
+  
+    //.mt-1
+    @each $directionkey, $direction in $spacing-dir {
+      @each $sizekey, $size in $spacing-size {
+        .#{$typekey}#{$directionkey}-#{$sizekey} {
+          #{$type}-#{$direction}: $size * $spacing-base-size;
+        }
+      }
+    }
+  
+    .#{$typekey} {
+      #{$type}: 0;
+    }
+  }
+
+.pointer{
+  cursor: pointer;
+}
